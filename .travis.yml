@@ -21,7 +21,8 @@ before_deploy:
   - zip -r freelec-springboot2-webservice *
   - mkdir -p deploy
   - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
-  - bundle update logger
+  - gem uninstall logger -x -a || true
+  - gem install dpl -v 1.10.16
 
 deploy:
   - provider: s3
