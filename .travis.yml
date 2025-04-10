@@ -12,11 +12,10 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-rvm:
-  - 2.7.7
-
 before_install:
   - chmod +x ./gradlew
+  - rvm install 2.7.7 --fuzzy
+  - rvm use 2.7.7 --default
   - gem install bundler --pre
   - gem install dpl -v 1.10.16
 
