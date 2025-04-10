@@ -40,6 +40,7 @@ deploy:
       branch: main
 
   - provider: codedeploy
+    dpl_version: 1.10.16
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: freelec-springboot-build6
