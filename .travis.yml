@@ -12,6 +12,9 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
+rvm:
+  - 2.7.7
+
 before_install:
   - chmod +x ./gradlew
   - gem install bundler --pre
@@ -23,7 +26,6 @@ before_deploy:
   - zip -r freelec-springboot2-webservice *
   - mkdir -p deploy
   - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
-  - gem install nokogiri --platform=ruby
 
 deploy:
   - provider: s3
