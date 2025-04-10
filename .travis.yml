@@ -28,6 +28,7 @@ before_deploy:
 
 deploy:
   - provider: s3
+    edge: false
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: freelec-springboot-build6
